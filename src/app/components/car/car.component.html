@@ -1,0 +1,21 @@
+<p>Table Car</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Marka İsmi</th>
+            <th>Rengi</th>
+            <th>Fiyat</th>
+            <th>Ürün Açıklaması</th>
+        </tr>
+    </thead> 
+    <tr *ngFor="let car of cars ">
+        <td >{{car.brandName}}</td>
+        <td>{{car.colorName}}</td>    
+        <td>{{car.dailyPrice}}</td>
+        <td>{{car.description}}</td>
+        <td><button class="btn btn-success" routerLink="/cars/detail/{{ car.id }}">
+            Detay
+          </button></td>
+    </tr>
+</table>
